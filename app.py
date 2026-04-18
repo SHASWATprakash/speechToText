@@ -15,7 +15,7 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # ---------------- MODEL ----------------
-model = WhisperModel("medium", compute_type="int8")
+model = WhisperModel("base", compute_type="int8", cpu_threads=4 )
 
 
 # ---------------- STREAM ENGINE ----------------
